@@ -15,9 +15,9 @@ This project was built to practice real-world DevOps/Cloud Engineering patterns:
 ## Architecture Overview
 
 ```
-                          ┌─────────────────────────────┐
-                          │           AWS VPC            │
-                          │        (10.0.0.0/16)         │
+                          ┌───────────────────────────────┐
+                          │           AWS VPC             │
+                          │        (10.0.0.0/16)          │
                           │                               │
         ┌─────────────────┼───────────────┐               │
         │                 │               │               │
@@ -28,9 +28,9 @@ This project was built to practice real-world DevOps/Cloud Engineering patterns:
   └─────┬─────┘     └───────────┘   └─────┬─────┘   └─────┬─────┘
         │                                  │               │
    ┌────▼────┐                       ┌─────▼───────────────▼─────┐
-   │   NAT    │                      │      EKS Node Group        │
-   │ Gateway  │◄─────────────────────┤   (t3.small, 2 nodes)      │
-   └────┬────┘                       └────────────────────────────┘
+   │   NAT   │                       │      EKS Node Group       │
+   │ Gateway │◄──────────────────────|    (t3.small, 2 nodes)    │
+   └────┬────┘                       └───────────────────────────┘
         │
    ┌────▼────┐
    │Internet │
