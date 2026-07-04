@@ -9,3 +9,9 @@ module "vpc" {
   availability_zones = var.availability_zones
   single_nat_gateway = var.single_nat_gateway
 }
+
+module "iam" {
+  source = "../../modules/iam"
+
+  cluster_name = var.cluster_name
+}
